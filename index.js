@@ -22,7 +22,6 @@ var marky = module.exports = function (markdown, options) {
   options = options || {}
   defaults(options, {
     sanitize: true,
-    highlightSyntax: true,
     prefixHeadingIds: true,
     serveImagesWithCDN: false,
     debug: false,
