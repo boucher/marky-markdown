@@ -39,8 +39,8 @@ var marky = module.exports = function (markdown, options) {
   log('Parse markdown into HTML and add syntax highlighting')
   html = render(markdown, options)
 
-  log('Convert HTML frontmatter into meta tags')
-  html = frontmatter(html)
+  // log('Convert HTML frontmatter into meta tags')
+  // html = frontmatter(html)
 
   if (options.sanitize) {
     log('Sanitize malicious or malformed HTML')
@@ -62,8 +62,8 @@ var marky = module.exports = function (markdown, options) {
   log('Add CSS classes to paragraphs containing badges')
   $ = badges($)
 
-  log('Add fragment hyperlinks links to h1,h2,h3,h4,h5,h6')
-  $ = headings($, options)
+  // log('Add fragment hyperlinks links to h1,h2,h3,h4,h5,h6')
+  // $ = headings($, options)
 
   log('Apply CSS classes to readme content already expressed by package metadata')
   $ = packagize($, options.package)
